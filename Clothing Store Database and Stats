@@ -1,0 +1,45 @@
+CREATE TABLE clothes (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
+
+/** clothes:
+tank tops
+blouses
+graphic tshirts
+cocktail dresses
+maxi dresses
+prom dresses
+tuxedos
+ties
+tennis sneakers
+basketball sneakers
+loafers
+sandals
+crocs
+heels
+dress shoes
+**/ 
+
+INSERT INTO clothes VALUES (1, "tank tops", 200, 12, 4);
+INSERT INTO clothes VALUES (2, "blouses", 140, 20, 4);
+INSERT INTO clothes VALUES (3, "graphic tshirts", 150, 15, 4);
+INSERT INTO clothes VALUES (4, "cocktail dresses", 100, 50, 6);
+INSERT INTO clothes VALUES (5, "maxi dresses", 100, 35, 5);
+INSERT INTO clothes VALUES (6, "prom dresses", 90, 75, 6);
+INSERT INTO clothes VALUES (7, "tuxedos", 200, 85, 6);
+INSERT INTO clothes VALUES (8, "ties", 250, 38, 6);
+INSERT INTO clothes VALUES (9, "tennis sneakers", 70, 40, 1);
+INSERT INTO clothes VALUES (10, "basketball sneakers", 40, 40, 1);
+INSERT INTO clothes VALUES (11, "loafers", 50, 29, 2);
+INSERT INTO clothes VALUES (12, "sandals", 100, 20, 2);
+INSERT INTO clothes VALUES (13, "crocs", 150, 50, 2);
+INSERT INTO clothes VALUES (14, "heels", 160, 55, 6);
+INSERT INTO clothes VALUES (15, "dress shoes", 80, 80, 6);
+
+
+--display the database ordered by price
+SELECT * FROM clothes ORDER BY price;
+
+--display clothing and items from the formal aisles
+SELECT * FROM clothes WHERE aisle > 5; 
+
+--display items which we have a higher quanitity of and are more affordable
+SELECT * FROM clothes WHERE quantity > 100 AND price < 50;
