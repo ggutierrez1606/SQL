@@ -1,0 +1,19 @@
+CREATE TABLE goodreads_challenge (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+year INTEGER,
+totalread INTEGER);
+
+INSERT into goodreads_challenge (year, totalread) VALUES (2017, 36);
+INSERT into goodreads_challenge (year, totalread) VALUES (2018, 40);
+INSERT into goodreads_challenge (year, totalread) VALUES (2019, 60);
+INSERT into goodreads_challenge (year, totalread) VALUES (2020, 36);
+INSERT into goodreads_challenge (year, totalread) VALUES (2021, 38);
+
+
+UPDATE goodreads_challenge SET totalread= 43 WHERE id=5;
+
+SELECT * FROM goodreads_challenge;
+
+DELETE FROM goodreads_challenge WHERE id=5;
+
+SELECT * FROM goodreads_challenge;
