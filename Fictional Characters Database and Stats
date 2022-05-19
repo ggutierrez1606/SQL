@@ -1,0 +1,49 @@
+Create table characters (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+series TEXT,
+power TEXT,
+role TEXT ) ;
+
+INSERT INTO characters (id, name, series, power, role) VALUES (1, "Wanda Maximoff", "MCU", "Witchcraft", "antihero");
+INSERT INTO characters (id, name, series, power, role) VALUES (2, "Vision", "MCU", "Energy", "hero");
+INSERT INTO characters VALUES (3, "Gideon Nav", "Locked Tomb", "Swordfighting", "hero");
+INSERT INTO characters VALUES (4, "Harrow Nonagesimus", "Locked Tomb", "Necromancy", "hero");
+INSERT INTO characters VALUES (5, "Obi Wan Kenobi", "Star Wars", "Negotiation", "hero");
+INSERT INTO characters VALUES (6, "Anakin Skywalker", "Star Wars", "Piloting", "fallen hero");
+INSERT INTO characters VALUES (7, "Padme Amidala", "Star Wars", "Diplomacy", "hero");
+INSERT INTO characters VALUES (8, "Simon Snow", "Simon Snow", "Swordfighting", "hero");
+INSERT INTO characters VALUES (9, "Basilton Pitch", "Simon Snow", "Magic", "antagonist");
+INSERT INTO characters VALUES (10, "Penelope Bunce", "Simon Snow", "Magic", "hero");
+INSERT INTO characters VALUES (11, "Kaz Brekker", "Six of Crows", "Mastermind", "hero");
+INSERT INTO characters VALUES (12, "Inej Ghafa", "Six of Crows", "Acrobatics", "hero");
+INSERT INTO characters VALUES (13, "Jesper Faley", "Six of Crows", "Shooting", "hero");
+INSERT INTO characters VALUES (14, "Nina Zenik", "Six of Crows", "Magic", "hero");
+INSERT INTO characters VALUES (15, "Wylan Van Eck", "Six of Crows", "Chemistry", "hero");
+INSERT INTO characters VALUES (16, "Mattias Helvar", "Six of Crows", "Fighting", "hero");
+
+
+CREATE TABLE hobbies (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+characters_id INTEGER,
+name TEXT);
+
+INSERT INTO hobbies (characters_id, name) VALUES (1, "watching sitcoms");
+INSERT INTO hobbies (characters_id, name) VALUES (1, "fighting magicians");
+INSERT INTO hobbies (characters_id, name) VALUES (3, "doing pushups");
+INSERT INTO hobbies (characters_id, name) VALUES (3, "fighting skeletons");
+INSERT INTO hobbies (characters_id, name) VALUES (4, "reading tomes");
+INSERT INTO hobbies (characters_id, name) VALUES (4, "animating skeletons");
+INSERT INTO hobbies (characters_id, name) VALUES (5, "flirting with the enemy");
+INSERT INTO hobbies (characters_id, name) VALUES (5, "losing his robes");
+INSERT INTO hobbies (characters_id, name) VALUES (6, "fixing droids");
+INSERT INTO hobbies (characters_id, name) VALUES (6, "breaking the jedi code");
+INSERT INTO hobbies (characters_id, name) VALUES (8, "eating scones");
+INSERT INTO hobbies (characters_id, name) VALUES (8, "stalking Basilton");
+INSERT INTO hobbies (characters_id, name) VALUES (9, "soccer");
+INSERT INTO hobbies (characters_id, name) VALUES (9, "fighting with Simon");
+INSERT INTO hobbies (characters_id, name) VALUES (9, "smoking");
+
+SELECT characters.name, hobbies.name FROM characters 
+JOIN hobbies 
+ON hobbies.characters_id = characters.id
